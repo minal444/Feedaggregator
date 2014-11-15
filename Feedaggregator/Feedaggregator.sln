@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feedaggregator", "Feedaggregator\Feedaggregator.csproj", "{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationCenter", "NotificationCenter\NotificationCenter.csproj", "{CDA27309-3251-47C3-890A-E73A99D50EBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVIMPH.Shared", "SVIMPH.Shared\SVIMPH.Shared.csproj", "{94A63216-C5C0-4673-A012-B0B6E0C795D3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://parth2651.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Feedaggregator\\Feedaggregator.csproj
+		SccProjectName1 = Feedaggregator
+		SccLocalPath1 = Feedaggregator
+		SccProjectUniqueName2 = NotificationCenter\\NotificationCenter.csproj
+		SccProjectName2 = NotificationCenter
+		SccLocalPath2 = NotificationCenter
+		SccProjectUniqueName3 = SVIMPH.Shared\\SVIMPH.Shared.csproj
+		SccProjectName3 = SVIMPH.Shared
+		SccLocalPath3 = SVIMPH.Shared
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Debug|x86.ActiveCfg = Debug|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Debug|x86.Build.0 = Debug|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Release|Any CPU.ActiveCfg = Release|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Release|x86.ActiveCfg = Release|x86
+		{9D3A8CA5-D00A-45F2-8CD1-CFBDA9B9A568}.Release|x86.Build.0 = Release|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Debug|x86.ActiveCfg = Debug|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Debug|x86.Build.0 = Debug|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Release|Any CPU.ActiveCfg = Release|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Release|x86.ActiveCfg = Release|x86
+		{CDA27309-3251-47C3-890A-E73A99D50EBE}.Release|x86.Build.0 = Release|x86
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
