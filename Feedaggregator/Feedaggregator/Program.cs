@@ -41,7 +41,7 @@ namespace Feedaggregator
             {
                 SVIMPH.Shared.EntityLayer.ErrorLogEntity errorLogentity = new SVIMPH.Shared.EntityLayer.ErrorLogEntity();
                 errorLogentity.ErrorDescription = ex.Message;
-                errorLogentity.Exception= ex.InnerException.ToString();
+                errorLogentity.Exception = ex.InnerException.ToString();
                 errorLogentity.Stacktrace = ex.StackTrace;
                 errorLogentity.ErrorSource = "Feedaggregator - " + ex.Source;
                 errorLogentity.ErrorMetadata = ex.Source;
@@ -82,17 +82,17 @@ namespace Feedaggregator
                         }
                         catch (Exception ex)
                         {
-                            
+
                             SVIMPH.Shared.EntityLayer.ErrorLogEntity errorLogentity = new SVIMPH.Shared.EntityLayer.ErrorLogEntity();
                             errorLogentity.ErrorDescription = ex.Message;
-                            errorLogentity.Exception= ex.InnerException.ToString();
+                            errorLogentity.Exception = ex.InnerException.ToString();
                             errorLogentity.Stacktrace = ex.StackTrace;
                             errorLogentity.ErrorSource = ex.Source;
                             errorLogentity.ErrorMetadata = "Feedaggregator - GetFeedSource";
                             SVIMPH.Shared.BusinessLayer.ErrorLogDTO.Insert(errorLogentity);
                             //throw ex;
                         }
-                        
+
                     }
                 }
             }
@@ -193,9 +193,17 @@ namespace Feedaggregator
                     //Fill feed Publish Dat
                     //DateTime publishdatetest = DateTimeOffset.Parse(item.Element(sourceColumnName.PublishDate).Value).UtcDateTime;
                     //DateTime publishdate = Convert.ToDateTime(item.Element(sourceColumnName.PublishDate).Value);
-                    DateTime publishdate = DateTimeOffset.Parse(item.Element(sourceColumnName.PublishDate).Value).DateTime;
-                    feedItemEntity.PublishDate = publishdate;
-
+                    DateTime publishdate;
+                    try
+                    {
+                        publishdate = DateTimeOffset.Parse(item.Element(sourceColumnName.PublishDate).Value).DateTime;
+                        feedItemEntity.PublishDate = publishdate;
+                    }
+                    catch
+                    {
+                        publishdate = System.DateTime.Now;
+                        feedItemEntity.PublishDate = publishdate;
+                    }
                     ////get publish date and convert date to UTC date based on timezone
                     //publishdate = DateTime.SpecifyKind(publishdate, DateTimeKind.Unspecified);
                     publishdate = DateTime.SpecifyKind(publishdate, DateTimeKind.Unspecified);
@@ -204,7 +212,7 @@ namespace Feedaggregator
                     //DateTime UTCPublishdate = TimeZoneInfo.ConvertTimeToUtc(publishdate, TimeZoneInfo.FindSystemTimeZoneById(fse.Timezone));
                     DateTime UTCPublishdate = TimeZoneInfo.ConvertTimeToUtc(publishdate, TimeZoneInfo.FindSystemTimeZoneById(fse.Timezone));
                     feedItemEntity.UTCPublishDate = UTCPublishdate;
-                    
+
                     //Fill feed Redirect URL
                     feedItemEntity.RedirectURL = item.Element(sourceColumnName.RedirectURL).Value;
                     //Fill feed Source
@@ -217,7 +225,7 @@ namespace Feedaggregator
                     strImageURL = GetImageURL(fse, item);
                     feedItemEntity.ImageURL = strImageURL;
                     FeedItemDTO.Insert(ref feedItemEntity);
-                    
+
                     //add search and releted feed mapping
                     if (Feedaggregator.Common.GenerateSearchIndex.Equals("1"))
                     {
@@ -233,8 +241,8 @@ namespace Feedaggregator
                     errorLogentity.ErrorDescription = ex.Message;
                     errorLogentity.Exception = ex.InnerException.ToString();
                     errorLogentity.Stacktrace = ex.StackTrace;
-                    errorLogentity.ErrorSource = fse.SourceName  + " - " + ex.Source;
-                    errorLogentity.ErrorMetadata = "Feedaggregator - GetFeedItems-"+ fse.SourceName +"-Insert";
+                    errorLogentity.ErrorSource = fse.SourceName + " - " + ex.Source;
+                    errorLogentity.ErrorMetadata = "Feedaggregator - GetFeedItems-" + fse.SourceName + "-Insert";
                     SVIMPH.Shared.BusinessLayer.ErrorLogDTO.Insert(errorLogentity);
                 }
             }
@@ -263,11 +271,13 @@ namespace Feedaggregator
                         {
                             if (fse.ImageNameSpace != string.Empty)
                             {
-                                doc.LoadHtml((HttpUtility.HtmlDecode(item.Element(content + strPathSplit[0]).Value)));
+                                if (item.Element(content + strPathSplit[0]) != null)
+                                    doc.LoadHtml((HttpUtility.HtmlDecode(item.Element(content + strPathSplit[0]).Value)));
                             }
                             else
                             {
-                                doc.LoadHtml((HttpUtility.HtmlDecode(item.Element(strPathSplit[0]).Value)));
+                                if (item.Element(strPathSplit[0]) != null)
+                                    doc.LoadHtml((HttpUtility.HtmlDecode(item.Element(strPathSplit[0]).Value)));
                             }
                         }
                         else if (strPathSplit.Length == 1)
