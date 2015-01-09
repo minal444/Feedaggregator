@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BollywoodGossip" Class="DBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MINAL-PC;Initial Catalog=BollywoodGossip;Integrated Security=True" SettingsObjectName="WindowsFormsApplication1.Properties.Settings" SettingsPropertyName="BollywoodGossipConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Feeds" Member="Feeds">
+    <Type Name="Feed">
+      <Column Name="FeedID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageURL" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RedirectURL" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Source" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SourceXML" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UTCPublishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Feed_FeedsMapping" Member="FeedsMappings" ThisKey="FeedID" OtherKey="FeedID" Type="FeedsMapping" />
+      <Association Name="Feed_FeedsMapping1" Member="FeedsMappings1" ThisKey="FeedID" OtherKey="ReletedFeedID" Type="FeedsMapping" />
+      <Association Name="FeedSource_Feed" Member="FeedSource" ThisKey="Source" OtherKey="FeedSourceID" Type="FeedSource" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeedsMapping" Member="FeedsMappings">
+    <Type Name="FeedsMapping">
+      <Column Name="FeedsMappingID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FeedID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReletedFeedID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Association Name="Feed_FeedsMapping" Member="Feed" ThisKey="FeedID" OtherKey="FeedID" Type="Feed" IsForeignKey="true" />
+      <Association Name="Feed_FeedsMapping1" Member="Feed1" ThisKey="ReletedFeedID" OtherKey="FeedID" Type="Feed" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FeedSource" Member="FeedSources">
+    <Type Name="FeedSource">
+      <Column Name="FeedSourceID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SourceName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="SourceURL" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SiteURL" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="LogoURL" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Imagesource" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ImageNameSpace" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="DescriptionNameSpace" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Timezone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="FeedSource_Feed" Member="Feeds" ThisKey="FeedSourceID" OtherKey="Source" Type="Feed" />
+    </Type>
+  </Table>
+</Database>

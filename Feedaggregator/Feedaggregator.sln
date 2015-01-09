@@ -9,9 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationCenter", "Notif
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVIMPH.Shared", "SVIMPH.Shared\SVIMPH.Shared.csproj", "{94A63216-C5C0-4673-A012-B0B6E0C795D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{55CC4856-BFEC-4A9A-BC24-9441790C476E}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://parth2651.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -24,6 +26,9 @@ Global
 		SccProjectUniqueName3 = SVIMPH.Shared\\SVIMPH.Shared.csproj
 		SccProjectName3 = SVIMPH.Shared
 		SccLocalPath3 = SVIMPH.Shared
+		SccProjectUniqueName4 = WindowsFormsApplication1\\WindowsFormsApplication1.csproj
+		SccProjectName4 = WindowsFormsApplication1
+		SccLocalPath4 = WindowsFormsApplication1
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +69,16 @@ Global
 		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{94A63216-C5C0-4673-A012-B0B6E0C795D3}.Release|x86.ActiveCfg = Release|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{55CC4856-BFEC-4A9A-BC24-9441790C476E}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
