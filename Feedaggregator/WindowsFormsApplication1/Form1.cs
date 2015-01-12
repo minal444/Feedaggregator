@@ -112,6 +112,12 @@ namespace WindowsFormsApplication1
             frmTimeZone.Show();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            WebCrowler wcPage = new WebCrowler();
+            wcPage.Show();
+        }
+
        
     }
 }

@@ -73,8 +73,10 @@ namespace Feedaggregator
                                 string rssOutput = reader.ReadToEnd();
 
                                 rssOutput = EscapeXMLValue(rssOutput);
+                                //save xml for Error Log
                                 if (Common.SaveXML.Equals("1"))
                                     File.WriteAllText(AppDomain.CurrentDomain.BaseDirectory + "\\" + fse.SourceName + ".xml", rssOutput);
+                                //Read and insert Feed
                                 ReadXML(fse, rssOutput);
                                 reader.Close();
                             }
@@ -114,6 +116,7 @@ namespace Feedaggregator
                 IEnumerable<XElement> items;
                 try
                 {
+                    //Convert input to XML
                     XElement xelement = XElement.Parse(rssOutput);
                     items = xelement.Elements(@"channel").Elements("item");//.Elements("title");
                 }
@@ -131,6 +134,7 @@ namespace Feedaggregator
                     return;
                 }
 
+                //Read and insert each feeditem
                 GetFeedItems(fse, items);
             }
             catch (Exception ex)
