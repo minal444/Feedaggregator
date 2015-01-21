@@ -190,6 +190,19 @@ namespace WindowsFormsApplication1
             }
             restultTerm.Where(x => x.Score > 1.0).ToArray();
             return restultTerm;
+        }
+
+        private void btnDeleteID_Click(object sender, EventArgs e)
+        {
+            LuceneStore.Directory directory = LuceneStore.FSDirectory.Open(directoryPath);
+            Analyzer analyzer = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30);
+            using (IndexWriter w = new IndexWriter(directory, analyzer, IndexWriter.MaxFieldLength.UNLIMITED))
+            {
+                Term trm = new Term("ID", textBoxSearch.Text);
+                w.DeleteDocuments(trm);
+                //w.Commit();
+                w.Optimize();
+            }
         }       
     }
 
