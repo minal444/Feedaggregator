@@ -10,5 +10,6 @@ namespace DBArchival
     public static class Common
     {
         public static string AuditCon = Convert.ToString(ConfigurationManager.ConnectionStrings["AuditDBConnection"]);
+        public static string directoryPath = ConfigurationManager.AppSettings["SearchIndexDirectoryPath"];
     }
 }
