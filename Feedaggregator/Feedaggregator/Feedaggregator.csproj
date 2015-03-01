@@ -89,6 +89,7 @@
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
+    <None Include="ProdConfigCopy\Feedaggregator.exe.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SVIMPH.Shared\SVIMPH.Shared.csproj">
