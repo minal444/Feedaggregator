@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
             
             
             HtmlWeb hw = new HtmlWeb();
-            HtmlAgilityPack.HtmlDocument doc = hw.Load(txtLink.Text);
+            HtmlAgilityPack.HtmlDocument doc = hw.Load(txtLink.Text,"GET");
             //doc.DocumentNode.SelectNodes("//link[(@type='application/rss+xml' or @type='application/atom+xml') and @rel='alternate']")
             
             #region firstpost
@@ -54,6 +54,8 @@ namespace WindowsFormsApplication1
                         else
                         {
                             string imageURL = attSrc.Value;
+                            pictureBox.Load(imageURL);
+                            Application.DoEvents();
                         }
                     }
                     
@@ -62,6 +64,7 @@ namespace WindowsFormsApplication1
             #endregion
 
             #region IBNLIVE
+            /*
             foreach (HtmlNode sectionNode in doc.DocumentNode.SelectNodes("//div[@class='articl_cont']"))
             {
                 foreach (HtmlNode divNode in sectionNode.SelectNodes("//div[@id='photo']"))
@@ -85,6 +88,7 @@ namespace WindowsFormsApplication1
                     
                 }
             }
+            */
             #endregion
      
 

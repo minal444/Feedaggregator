@@ -31,6 +31,8 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtLink = new System.Windows.Forms.TextBox();
             this.txtResult = new System.Windows.Forms.TextBox();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSearch
@@ -58,16 +60,26 @@
             this.txtResult.Size = new System.Drawing.Size(572, 360);
             this.txtResult.TabIndex = 2;
             // 
+            // pictureBox
+            // 
+            this.pictureBox.Location = new System.Drawing.Point(630, 78);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(493, 360);
+            this.pictureBox.TabIndex = 3;
+            this.pictureBox.TabStop = false;
+            // 
             // WebCrowler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 468);
+            this.ClientSize = new System.Drawing.Size(1151, 468);
+            this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.txtLink);
             this.Controls.Add(this.btnSearch);
             this.Name = "WebCrowler";
             this.Text = "WebCrowler";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -78,5 +90,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtLink;
         private System.Windows.Forms.TextBox txtResult;
+        private System.Windows.Forms.PictureBox pictureBox;
     }
 }
