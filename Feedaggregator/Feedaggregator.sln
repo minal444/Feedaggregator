@@ -18,33 +18,6 @@ EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BollywoodGossip_Audit_DB", "BollywoodGossip_Audit_DB\BollywoodGossip_Audit_DB.sqlproj", "{A7AD3816-3C76-41DC-9F53-01468926DB16}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://parth2651.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Feedaggregator\\Feedaggregator.csproj
-		SccProjectName1 = Feedaggregator
-		SccLocalPath1 = Feedaggregator
-		SccProjectUniqueName2 = NotificationCenter\\NotificationCenter.csproj
-		SccProjectName2 = NotificationCenter
-		SccLocalPath2 = NotificationCenter
-		SccProjectUniqueName3 = SVIMPH.Shared\\SVIMPH.Shared.csproj
-		SccProjectName3 = SVIMPH.Shared
-		SccLocalPath3 = SVIMPH.Shared
-		SccProjectUniqueName4 = WindowsFormsApplication1\\WindowsFormsApplication1.csproj
-		SccProjectName4 = WindowsFormsApplication1
-		SccLocalPath4 = WindowsFormsApplication1
-		SccProjectUniqueName5 = DBArchival\\DBArchival.csproj
-		SccProjectName5 = DBArchival
-		SccLocalPath5 = DBArchival
-		SccProjectUniqueName6 = BollywoodGossip_DB\\BollywoodGossip_DB.sqlproj
-		SccProjectName6 = BollywoodGossip_DB
-		SccLocalPath6 = BollywoodGossip_DB
-		SccProjectUniqueName7 = BollywoodGossip_Audit_DB\\BollywoodGossip_Audit_DB.sqlproj
-		SccProjectName7 = BollywoodGossip_Audit_DB
-		SccLocalPath7 = BollywoodGossip_Audit_DB
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|ARM = Ad-Hoc|ARM
